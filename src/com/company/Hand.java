@@ -18,8 +18,16 @@ public class Hand extends LinkedList<Card> {
 
     private boolean hasAce() {
         for(Card c: this)
-            if(c.value==Value.ACE)
-                return true;
+            if(c.value==Value.ACE)return true;
         return false;
+    }
+    public  boolean hasSplit()
+    {
+        for(Card c: this)
+           for(Card s: this)
+            { if(c!=s)
+               if(c.value.getScore()==s.value.getScore()) return true;
+            }
+            return false;
     }
 }

@@ -7,9 +7,10 @@ import java.util.Scanner;
  */
 public class ConsoleIntellect extends Intellect {
     private Scanner in = new Scanner(System.in);
-
     @Override
     public Command decide(int score) {
+
+
         while(true){
             System.out.println("HIT/STAND? ");
             String c = in.nextLine();
